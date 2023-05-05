@@ -1,0 +1,394 @@
+@media (min-width: 1285px) {
+  /*горихонтальная навигация*/
+  .nav {
+    margin: auto;
+    padding: 2%;
+  }
+  .nav ul li {
+    list-style-type: none;
+    display: inline;
+  }
+  .nav a {
+    display: inline-block;
+    padding: 0.7em;
+    text-decoration: none;
+    color: #221f1f;
+    font-size: 120%;
+  }
+  .nav a:hover {
+    text-decoration: #333;
+  }
+  /*то, что не название театра*/
+  .theatreitem {
+    position: relative;
+  }
+  /*название театра*/
+  .theatrename {
+    font-size: 300%;
+    color: #221f1f;
+    font-family: "Serifiqo 4F Free Capitals";
+    margin: -4%;
+  }
+}
+
+
+/*прячем бургер*/
+.burger {
+  display: none;
+}
+body {
+  margin-left: 7%;
+  margin-right: 7%;
+}
+header {
+  font-family: "Calibri";
+  font-weight: 100;
+  display: flex;
+}
+/*картинка*/
+.hall {
+  width: 100%;
+  height: auto;
+}
+/*анимация при наведении на ссылку*/
+.theatreitem:after {
+  --scale: 0;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 70%; /*для закрепления палочки снизу*/
+  height: 1%; /*высота палочки*/
+  background: #1d1c1c;
+  transform: scaleX(var(--scale));
+  transform-origin: var(--x) 50%;
+  transition: transform 0.4s ease-out;
+}
+.theatreitem:hover {
+  color: #1d1c1c;
+}
+.theatreitem:hover::after {
+  --scale: 1;
+}
+/*разметка главной страницы*/
+.container {
+  display: flex;
+  flex-direction: row;
+}
+/*для афиши*/
+.daydate {
+  color: white;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 115%;
+  width: 90%;
+  height: auto;
+  margin: auto;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  padding: 1.5%;
+  height: auto;
+  background-color: #353535;
+  opacity: 0.95;
+  border-radius: 9px;
+}
+.date {
+  display: inline-block;
+  margin-right: 2%;
+}
+.day {
+  display: inline-block;
+}
+/*блок афиши первый*/
+.lightgrey {
+  width: 90%;
+  height: auto;
+  margin: auto;
+  padding: 1.5%;
+  height: auto;
+  opacity: 0.95;
+  border-radius: 9px;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  background: linear-gradient(to right, #ebebebb0, #ffffff);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+/*блок афиши второй*/
+.middlegrey {
+  width: 90%;
+  height: auto;
+  margin: auto;
+  padding: 1.5%;
+  height: auto;
+  opacity: 0.95;
+  border-radius: 9px;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  background: linear-gradient(to right, #e9e9e9, #ffffff);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+/*блок афиши третий*/
+.darkergrey {
+  width: 90%;
+  height: auto;
+  margin: auto;
+  padding: 1.5%;
+  height: auto;
+  opacity: 0.95;
+  border-radius: 9px;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  background: linear-gradient(to right, #d8d8d8, #ffffff);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+/*таблица афиши*/
+.time {
+  display: inline-block;
+  margin-right: 1%;
+  font-size: 145%;
+}
+.info {
+  display: inline-block;
+  margin-right: 1%;
+  width: 75%;
+}
+.name {
+  font-size: 135%;
+}
+
+/*футер*/
+.foot {
+  text-align: center;
+  padding: 1%;
+  background: url("../images/forfooter.jpg") no-repeat;
+  background-size: cover;
+  color: white;
+  text-indent: 1%;
+  width: 100%;
+  height: auto;
+  margin-bottom: -100%;
+}
+.footcontact {
+  display: inline-block;
+  line-height: 1%;
+  margin: 5%;
+  margin-bottom: -10%;
+}
+.places {
+  display: inline-block;
+  line-height: 3%;
+  margin: 5%;
+  margin-bottom: -10%;
+}
+.morelinks {
+  display: inline-block;
+  margin: 6%;
+  margin-bottom: -10%;
+}
+.morelinks img {
+  width: 25px;
+  margin-top: 7%;
+  margin-right: 2%;
+}
+.afoot {
+  color: white;
+  display: block;
+  text-decoration: none;
+}
+.afoot:hover {
+  color: rgb(255, 255, 0);
+}
+.afoot:active {
+  color: rgb(9, 255, 0);
+}
+.afoot:checked {
+  color: white;
+}
+.theatrefooter {
+  margin-bottom: -5%;
+  font-size: 200%;
+  font-family: "Serifiqo 4F Free Capitals";
+}
+
+/*для анимации появления*/
+.element-animation {
+  /* Скроем элемент в начальном состоянии */
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.element-animation.element-show {
+  opacity: 1;
+  transition: all 1s;
+  transform: translateY(0%);
+}
+
+#myBtn {
+  display: none; 
+  position: fixed; 
+  bottom: 20px;
+  right: 30px; 
+  z-index: 99; 
+  border: none; 
+  background-color:#e9e9e9; 
+  cursor: pointer; 
+  padding: 15px; 
+  border-radius: 10px;
+  font-size: 18px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#myBtn:hover {
+  background-color: #5c5c5c; 
+}
+
+.up {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.logo{
+  top: 0px;
+  left: 20px;
+  position: fixed; 
+  background-image:
+    url("/images/logo.svg") no-repeat;
+    background-size: cover;
+}
+
+* {
+  box-sizing: border-box;
+}
+/* Поля ввода полной ширины */
+input[type="text"],
+input[type="password"] {
+  border-radius: 15px;
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* Добавить цвет фона, когда входы получают фокус */
+input[type="text"]:focus,
+input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Установите стиль для всех кнопок */
+.button {
+  background-color: #353535;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  opacity: 0.9;
+}
+
+.buy{
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 30px;
+  display: inline;
+  float: right;  
+}
+
+.buyticket{
+  background-color: #353535;
+  border-radius: 10px;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.buyticket:hover{
+  background-color: #222222;
+
+}
+
+.button:hover, .buyticket:hover{
+  opacity: 1;
+}
+
+/* Дополнительные стили для кнопки "Отмена" */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #d6d6d6;
+}
+
+/* Поплавок очистить и кнопки регистрации и добавить равную ширину */
+.cancelbtn,
+.signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Добавить отступы к элементам контейнера */
+.formcontainer {
+  padding: 16px;
+}
+
+/* Модальный (фон) */
+.modal {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed; /* Оставаться на месте */
+  z-index: 1; /* Сидеть на вершине */
+  left: 0;
+  top: 0;
+  width: 100%; /* Полная ширина */
+  height: 100%; /* Полный высота */
+  overflow: auto; /* Включите прокрутку, если это необходимо */
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+
+/* Модальное Содержание/Бокс */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% сверху, 15% снизу и по центру */
+  border: 1px solid #888;
+  width: 80%; /* Может быть больше или меньше, в зависимости от размера экрана */
+}
+
+/* Стиль горизонтальной линейки */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* кнопка закрытия (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #444444;
+  cursor: pointer;
+}
+
+/* Снимите поплавки */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+

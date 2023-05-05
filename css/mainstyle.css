@@ -1,0 +1,221 @@
+@media (min-width: 1284px) {
+  .nav {
+    margin: auto;
+    padding: 1%;
+  }
+  .nav ul li {
+    list-style-type: none;
+    display: inline;
+  }
+  .nav a {
+    display: inline-block;
+    padding: 1em;
+    text-decoration: none;
+    color: #221f1f;
+    font-size: 110%;
+  }
+  .nav a:hover {
+    text-decoration: #333;
+  }
+  .theatreitem {
+    position: relative;
+  }
+  /*мариинский театр*/
+  .theatrename {
+    font-size: 250%;
+    color: #221f1f;
+    font-family: "Serifiqo 4F Free Capitals";
+    margin: -4%;
+  }
+}
+body {
+  margin-left: 7%;
+  margin-right: 7%;
+}
+header {
+  margin-top: -1%;
+  font-family: "Calibri";
+  font-weight: 100;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  z-index: 8;
+}
+
+/*загогулинки*/
+header::before {
+  left: 60px;
+  position: absolute;
+  -moz-background-size: contain;
+  background-size: contain;
+  bottom: 0;
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-image: url("../images/headerleft.svg");
+  -moz-background-size: contain;
+  background-size: contain;
+}
+header::after {
+  bottom: 0;
+  position: absolute;
+  width: -webkit-calc(100% - 90px);
+  width: -moz-calc(100% - 90px);
+  width: calc(100% - 90px);
+  height: 1px;
+  left: 90px;
+  position: absolute;
+  content: "";
+  background-color: #c0ac67;
+}
+
+/*меню бургер*/
+/*скрытие чекбокса*/
+.burger {
+  display: none;
+}
+
+/*для анимации появления*/
+.element-animation {
+  /* Скроем элемент в начальном состоянии */
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.element-animation.element-show {
+  opacity: 1;
+  transition: all 1s;
+  transform: translateY(0%);
+}
+
+/*анимация при наведении на ссылку*/
+.theatreitem:after {
+  --scale: 0;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 70%; /*для закрепления палочки снизу*/
+  height: 1%; /*высота палочки*/
+  background: #1d1c1c;
+  transform: scaleX(var(--scale));
+  transform-origin: var(--x) 50%;
+  transition: transform 0.4s ease-out;
+}
+.theatreitem:hover {
+  color: #1d1c1c;
+}
+.theatreitem:hover::after {
+  --scale: 1;
+}
+
+/*футер*/
+.foot {
+  text-align: center;
+  padding: 1%;
+  background: url("../images/forfooter.jpg") no-repeat;
+  background-size: cover;
+  color: white;
+  text-indent: 1%;
+  width: 100%;
+  height: auto;
+  margin-bottom: -100%;
+}
+.footcontact {
+  display: inline-block;
+  line-height: 1%;
+  margin: 5%;
+  margin-bottom: -10%;
+}
+.places {
+  display: inline-block;
+  line-height: 3%;
+  margin: 5%;
+  margin-bottom: -10%;
+}
+.morelinks {
+  display: inline-block;
+  margin: 6%;
+  margin-bottom: -10%;
+}
+.morelinks img {
+  width: 25px;
+  margin-top: 7%;
+  margin-right: 2%;
+}
+.afoot {
+  color: white;
+  display: block;
+  text-decoration: none;
+}
+.afoot:hover {
+  color: rgb(255, 255, 0);
+}
+.afoot:active {
+  color: rgb(9, 255, 0);
+}
+.afoot:checked {
+  color: white;
+}
+.theatrefooter {
+  margin-bottom: -5%;
+  font-size: 200%;
+  font-family: "Serifiqo 4F Free Capitals";
+}
+/*текст с информацией*/
+section {
+  padding: 3% 24%;
+}
+/*заголовок*/
+.namestr {
+  margin: 3%;
+  text-align: center;
+  font-family: Georgia, serif;
+  font-weight: 400;
+  font-size: 300%;
+}
+.littlenamestr {
+  margin: 5%;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+  font-size: 120%;
+  font-weight: 400;
+}
+
+.littlenamestr::after {
+  bottom: -5px;
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  content: "";
+  background-color: #cc493d;
+  width: 40px;
+  height: 1px;
+}
+/*абзацы*/
+.text {
+  font-size: 150%;
+  font-family: Georgia, serif;
+  text-indent: 5%;
+}
+/*ссылки в абзацах*/
+.text a {
+  color: black;
+}
+.text a:visited {
+  color: black;
+}
