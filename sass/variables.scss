@@ -1,0 +1,48 @@
+$navcolor: #221f1f;
+@mixin display() {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+@mixin contain($type) {
+  -moz-background-size: $type;
+  background-size: $type;
+  -moz-background-size: $type;
+  background-size: $type;
+}
+@mixin width() {
+  width: -webkit-calc(100% - 90px);
+  width: -moz-calc(100% - 90px);
+  width: calc(100% - 90px);
+}
+@mixin transformX() {
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+@mixin transformY() {
+  transform: scaleX(var(--scale));
+  transform-origin: var(--x) 50%;
+  transition: transform 0.4s ease-out;
+}
+@mixin placement() {
+  display: inline-block;
+  margin: 5%;
+  margin-bottom: -10%;
+}
+@mixin margin(){
+  width: 40%;
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
