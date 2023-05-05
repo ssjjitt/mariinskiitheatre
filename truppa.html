@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Труппа</title>
+  <link rel="stylesheet" href="css\truppa.css" />
+  <link href="fonts/fonts.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="css/mainstyle.css">
+  <!--иконка сайта-->
+  <link rel="icon" href="images\logo.png" />
+  <style>
+    @import url(css/small.css) (min-width: 241px) and (max-width: 1284px);
+  </style>
+</head>
+
+<body>
+  <header>
+    <!--бургер-->
+    <div class="burger">
+      <input id="toggle" type="checkbox" />
+      <label class="burgerlabel" for="toggle">
+        <span class="burgerspan"></span>
+      </label>
+      <ul class="burgerbox">
+        <li>
+          <a class="item itemtop" href="index.html">Мариинский театр</a>
+        </li>
+        <li><a class="item" href="visittheatre.html">Визит в театр</a></li>
+        <li><a class="item" href="truppa.html">Труппа</a></li>
+        <li><a class="item" href="about.html">О театре</a></li>
+        <li><a class="item" href="news.html">Новости</a></li>
+        <!--соцсети-->
+        <div class="contact">
+          <a href="https://vk.com/mariinskytheatre"><img src="images\vklogo.png" class="logo" id="vklogo" /></a>
+          <a href="https://ok.ru/mariinsky"><img src="images\oklogo.png" class="logo" id="oklogo" /></a>
+          <a href="https://t.me/mariinsky"><img src="images\tglogo.png" class="logo" id="tglogo" /></a>
+        </div>
+      </ul>
+    </div>
+    <!--горизонтальное меню навигации-->
+    <nav class="nav">
+      <ul>
+        <li>
+          <a href="visittheatre.html" class="theatreitem">Визит в театр</a>
+        </li>
+        <li><a href="truppa.html" class="theatreitem">Труппа</a></li>
+        <li class="theatrename">
+          <a href="index.html" class="theatre">Мариинский театр</a>
+        </li>
+        <li><a href="about.html" class="theatreitem">О театре</a></li>
+        <li><a href="news.html" class="theatreitem">Новости</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <button onclick="topFunction()" id="myBtn">
+    <div class="up"></div>
+  </button>
+
+  <section>
+    <div class="namestr element-animation">Труппа</div>
+    <div class="text">
+      Специально для наших великолепных зрителей, а так же для тех, кто просто
+      интересуется, мы собрали воедино фотографии представителей труппы.
+    </div>
+
+    <!-- Container for the image gallery -->
+    <div class="container element-animation">
+      <!-- Full-width images with number text -->
+      <div class="mySlides">
+        <div class="numbertext">1 / 24</div>
+        <img src="images\mariabayankina.png" style="width: 100%" />
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">2 / 24</div>
+        <img src="images\janna_dombrovskaya.jpg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">3 / 24</div>
+        <img src="images\anastasiakalagina.jpg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">4 / 24</div>
+        <img src="images\violetta.jpg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">5 / 24</div>
+        <img src="images\gelenagaskarova.jpg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">6 / 24</div>
+        <img src="images\annadenisova.jpg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">7 / 24</div>
+        <img src="images\svetlanakarpova.jpg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">8 / 24</div>
+        <img src="images\olgaborodina.jpg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">9 / 24</div>
+        <img src="images\zlatabylicheva.jpg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">10 / 24</div>
+        <img src="images\ekaterinakrapivina.jpg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">11 / 24</div>
+        <img src="images\elenavitman.jpg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">12 / 24</div>
+        <img src="images\larisa.jpg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">13 / 24</div>
+        <img src="images\gamidabdulov.jpg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">14 / 24</div>
+        <img src="images\ahmedagadi.jpg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">15 / 24</div>
+        <img src="images\deniszakirov.jpg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">16 / 24</div>
+        <img src="images\evgenyakimov.jpg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">17 / 24</div>
+        <img src="images\oleg.jpg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">18 / 24</div>
+        <img src="images\evgenyahmedov.jpg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">19 / 24</div>
+        <img src="images\romanbyrdenko.jpg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">20 / 24</div>
+        <img src="images\alexgerasimov.jpg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">21 / 24</div>
+        <img src="images\magerramgyseinov.jpg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">22 / 24</div>
+        <img src="images\iliaabdrazakov.jpg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">23 / 24</div>
+        <img src="images\iliabannik.jpg" style="width: 100%" />
+      </div>
+
+      <div class="mySlides">
+        <div class="numbertext">24 / 24</div>
+        <img src="images\uriivlasov.jpg" style="width: 100%" />
+      </div>
+
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      <!-- Image text -->
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+      <!-- Thumbnail images -->
+      <div class="row">
+        <div class="column">
+          <img class="demo cursor" src="images\mariabayankina.png" style="width: 100%" onclick="currentSlide(1)"
+            alt="Мария Баянкина - сопрано" />
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images\janna_dombrovskaya.jpg" style="width: 100%" onclick="currentSlide(2)"
+            alt="Жанна Добровская - сопрано" />
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images\anastasiakalagina.jpg" style="width: 100%" onclick="currentSlide(3)"
+            alt="Анастасия Калагина - сопрано" />
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images\violetta.jpg" style="width: 100%" onclick="currentSlide(4)"
+            alt="Виолетта Лукьяненко - сопрано" />
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images\gelenagaskarova.jpg" style="width: 100%" onclick="currentSlide(5)"
+            alt="Гелена Гаскарова - сопрано" />
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images\annadenisova.jpg" style="width: 100%" onclick="currentSlide(6)"
+            alt="Анна Денисова - сопрано" />
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images\svetlanakarpova.jpg" style="width: 100%" onclick="currentSlide(7)"
+            alt="Светлана Карпова - меццо-сопрано" />
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images\olgaborodina.jpg" style="width: 100%" onclick="currentSlide(8)"
+            alt="Ольга Бородина - меццо-сопрано" />
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images\zlatabylicheva.jpg" style="width: 100%" onclick="currentSlide(9)"
+            alt="Злата Булычёва - меццо-сопрано" />
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images\ekaterinakrapivina.jpg" style="width: 100%" onclick="currentSlide(10)"
+            alt="Екатерина Крапивина - меццо-сопрано" />
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images\elenavitman.jpg" style="width: 100%" onclick="currentSlide(11)"
+            alt="Елена Витман - меццо-сопрано" />
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images\larisa.jpg" style="width: 100%" onclick="currentSlide(12)"
+            alt="Лариса Дядькова - меццо-сопрано" />
+        </div>
+        <div class="column">
+          <img class="demo cursor" src=" images\gamidabdulov.jpg" style="width: 100%" onclick="currentSlide(13)"
+            alt="Гамид Абдулов - тенор" />
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images\ahmedagadi.jpg" style="width: 100%" onclick="currentSlide(14)"
+            alt="Ахмед Агади - тенор" />
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images\deniszakirov.jpg" style="width: 100%" onclick="currentSlide(15)"
+            alt="Денис Закиров - тенор" />
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images\evgenyakimov.jpg" style="width: 100%" onclick="currentSlide(16)"
+            alt="Евгений Акимов- тенор" />
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images\oleg.jpg" style="width: 100%" onclick="currentSlide(17)"
+            alt="Олег Балашов - тенор" />
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images\evgenyahmedov.jpg" style="width: 100%" onclick="currentSlide(18)"
+            alt="Евгений Ахмедов- тенор" />
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images\romanbyrdenko.jpg" style="width: 100%" onclick="currentSlide(19)"
+            alt="Роман Бурденко- баритон" />
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images\alexgerasimov.jpg" style="width: 100%" onclick="currentSlide(20)"
+            alt="Александр Герасимов - баритон" />
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images\magerramgyseinov.jpg" style="width: 100%" onclick="currentSlide(21)"
+            alt="Магеррам Гусейнов - баритон" />
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images\iliaabdrazakov.jpg" style="width: 100%" onclick="currentSlide(22)"
+            alt="Ильдар Абдразаков - бас" />
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images\iliabannik.jpg" style="width: 100%" onclick="currentSlide(23)"
+            alt="Илья Банник - бас" />
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="images\uriivlasov.jpg" style="width: 100%" onclick="currentSlide(24)"
+            alt="Юрий Власов - бас" />
+        </div>
+      </div>
+    </div>
+
+    <div class="littlenamestr element-animation">Сопрано</div>
+    <div class="text element-animation">
+      Обладательницы сопрано — представительницы высокого женского певческого
+      голоса. Для звучания характерны гибкость, техничность исполнения,
+      полетность и подвижность.
+    </div>
+
+    <div class="littlenamestr element-animation">Меццо-сопрано</div>
+    <div class="text element-animation">
+      Меццо-сопрано - наиболее распространенный тип женского голоса.
+      Характерными признаками меццо-сопрано являются: полнота и насыщенность
+      звучания в среднем регистре, в то же время, мягкость и объемность в
+      пении низких нот (в грудном регистре).
+    </div>
+
+    <div class="littlenamestr element-animation">Тенор</div>
+    <div class="text element-animation">
+      Тенор – самый сложный певческий голос: драматический, меццовый,
+      лирический крепкий и легкий лирический (альтино). Для высокого голоса
+      всегда важнее построение центра и головного регистра. При построении
+      нижнего регистра следует избегать понижения позиции, вернее, важно уметь
+      быстро ее восстанавливать.
+    </div>
+
+    <div class="littlenamestr element-animation">Баритон</div>
+    <div class="text element-animation">
+      Баритон – это одна из разновидностей мужского певческого голоса. По
+      высоте между находится басом и тенором. Рабочий диапазон баритона и
+      вокальные упражнения для баритона находятся в пределах от ля большой
+      октавы до ля первой октавы, а переходные ноты ре-ми бемоль-ми первой
+      октавы.
+    </div>
+
+    <div class="littlenamestr element-animation">Бас</div>
+    <div class="text element-animation">
+      Бас – самый низкий мужской певческий голос, имеющий соответствующую
+      тесситуру голоса. Отличается большой глубиной и полнотой звучания. С
+      давних пор и по наше время басовые голоса используются композиторами.
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="theatrefooter">Мариинский театр</div>
+    <div class="footcontact">
+      <p>© 1998 – 2023</p>
+      <p>Мариинский театр</p>
+      <p>post@mariinsky.ru</p>
+      <p>Справочная служба</p>
+      <p>+7 812 326 41 41</p>
+      <p>tickets@mariinsky.ru</p>
+    </div>
+    <div class="places">
+      <p>Мариинский театр:</p>
+      <p>Театральная площадь, д. 1</p>
+      <p>Мариинский-2:</p>
+      <p>ул. Декабристов, д. 34</p>
+      <p>Мариинский-2:</p>
+      <p>ул. Декабристов, д. 34</p>
+      <p>Концертный зал:</p>
+      <p>ул. Писарева, д. 20</p>
+    </div>
+    <div class="morelinks">
+      <a href="https://mariinsky.tv/" class="afoot">mariinsky.tv</a>
+      <a href="https://www.mariinsky.ru/fm/" class="afoot">mariinsky.fm</a>
+      <a href="https://www.mariinsky.ru/links/2/" class="afoot">mariinsky.gift</a>
+      <a href="https://vk.com/mariinskytheatre"><img src="images\vklogo.png" /></a>
+      <a href="https://ok.ru/mariinsky"><img src="images\oklogo.png" /></a>
+      <a href="https://t.me/mariinsky"><img src="images\tglogo.png" /></a>
+    </div>
+  </footer>
+  <script type="text/javascript" src="script\main.js"></script>
+  <script type="text/javascript" src="script\secondvar.js"></script>
+  <script type="text/javascript" src="script\truppa.js"></script>
+</body>
+
+</html>

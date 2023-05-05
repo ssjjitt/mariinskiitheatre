@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Мариинский театр</title>
+  <link rel="stylesheet" href="css\main.css" />
+  <link href="fonts/fonts.css" rel="stylesheet" type="text/css" />
+  <!--иконка сайта-->
+  <link rel="icon" href="images\logo.png" />
+  <!--jQuery-->
+  <script type="text/javascript" src="script\jquery.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+  <style>
+    @import url(css/small.css) (min-width: 241px) and (max-width: 1284px);
+  </style>
+</head>
+<body>
+  <header>
+    <!--бургер-->
+    <div class="burger">
+      <input id="toggle" type="checkbox" />
+      <label class="burgerlabel" for="toggle">
+        <span class="burgerspan"></span>
+      </label>
+      <ul class="burgerbox">
+        <li>
+          <a class="item itemtop" href="index.html">Мариинский театр</a>
+        </li>
+        <li><a class="item" href="visittheatre.html">Визит в театр</a></li>
+        <li><a class="item" href="truppa.html">Труппа</a></li>
+        <li><a class="item" href="about.html">О театре</a></li>
+        <li><a class="item" href="news.html">Новости</a></li>
+      </ul>
+    </div>
+    <!--горизонтальное меню навигации-->
+    <nav class="nav">
+      <ul>
+        <li>
+          <a href="visittheatre.html" class="theatreitem">Визит в театр</a>
+        </li>
+        <li><a href="truppa.html" class="theatreitem">Труппа</a></li>
+        <li class="theatrename">
+          <a href="index.html" class="theatre">Мариинский театр</a>
+        </li>
+        <li><a href="about.html" class="theatreitem">О театре</a></li>
+        <li><a href="news.html" class="theatreitem">Новости</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <div class="logo">
+      <svg width="75" id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 595.28 841.89">
+        <defs>
+          <style>
+            .b {
+              stroke: #1d1d1b;
+              stroke-miterlimit: 10;
+            }
+
+            .b,
+            .c {
+              fill: #1d1d1b;
+            }
+          </style>
+        </defs>
+        <path class="c"
+          d="M167.05,313.95h39.16l48.99,136.55c6.15,17.46,12.01,35.5,18.16,53.25h1.56c6.15-17.75,11.52-35.79,17.67-53.25l48.41-136.55h39.16v255.56h-30.23v-140.72c0-22.25,2.5-52.97,4.14-75.57h-1.56l-20.29,58.28-48.13,132.2h-21.55l-48.38-132.2-20.25-58.28h-1.56c1.64,22.6,4.14,53.32,4.14,75.57v140.72h-29.45v-255.56Z" />
+        <rect class="c" x="261.56" y="163.53" width="32.94" height="292.27"
+          transform="translate(587.7 31.63) rotate(90)" />
+        <g>
+          <rect class="c" x="112.05" y="588.62" width="52.73" height="12.08" />
+          <rect class="c" x="111.2" y="627.62" width="48.67" height="12.08"
+            transform="translate(-498.13 769.2) rotate(-90)" />
+          <path class="b" d="M187.61,588.86h38.36v7.17h-29.89v20.85h25.22v7.17h-25.22v24.2h30.91v7.17h-39.38v-66.56Z" />
+          <path class="b"
+            d="M273.18,589.77h9.56l22.51,66.56h-8.97l-11.61-37.17c-2.39-7.44-4.53-14.75-6.66-22.43h-.41c-2.06,7.72-4.2,14.99-6.59,22.43l-11.73,37.17h-8.62l22.51-66.56Zm-10.68,39.52h30.65v6.76h-30.65v-6.76Z" />
+          <rect class="c" x="313.71" y="589.13" width="52.73" height="12.08" />
+          <rect class="c" x="312.86" y="628.14" width="48.67" height="12.08"
+            transform="translate(-296.99 971.38) rotate(-90)" />
+          <path class="b"
+            d="M390.07,590.41h20.85c13.56,0,23.29,4.87,23.29,18.73s-9.73,19.69-23.29,19.69h-12.38v28.13h-8.47v-66.56Zm19.63,31.56c10.36,0,16.06-4.2,16.06-12.82s-5.7-11.86-16.06-11.86h-11.16v24.69h11.16Zm-.45,4.55l6.64-4.38,20.31,34.83h-9.6l-17.34-30.45Z" />
+        </g>
+      </svg>
+    </div>
+  </section>
+  <section class="sectionhall">
+    <img src="images\hall3.png" alt="hall" class="hall" />
+  </section>
+  <section>
+    <div id="id01" class="modal">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close"
+        title="Закрыть модальный">x</span>
+      <form class="modal-content">
+        <div class="formcontainer">
+          <h1>Заказ билета</h1>
+          <p>
+            Пожалуйста, заполните эту форму, чтобы заказать билет на выбранный
+            вами спектакль.
+          </p>
+          <hr />
+          <label><b>Email</b></label>
+          <input type="text" placeholder="Введите вашу почту" name="email" required />
+
+          <label><b>Фамилия</b></label>
+          <input type="text" placeholder="Введите вашу фамилию" name="fio" required />
+
+          <label><b>Имя</b></label>
+          <input type="text" placeholder="Введите ваше имя" name="name" required />
+
+          <label><b>Отчество</b></label>
+          <input type="text" placeholder="Введите ваше отчество" name="twoname" required />
+
+          <label><b>Пароль</b></label>
+          <input type="password" placeholder="Введите пароль" name="psw" required />
+
+          <label><b>Повторить пароль</b></label>
+          <input type="password" placeholder="Повторите пароль" name="psw-repeat" required />
+
+          <label>
+            <input type="checkbox" checked="checked" name="remember" style="margin-bottom: 15px" />
+            Запомнить меня
+          </label>
+
+          <div class="clearfix">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'"
+              class="cancelbtn button">
+              Отменить
+            </button>
+            <button type="submit" class="signup button">Регистрация</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+  <section>
+    <button onclick="topFunction()" id="myBtn">
+      <div class="up"></div>
+    </button>
+  </section>
+  <main class="container">
+    <section class="showlist">
+      <div class="daydate">
+        <div class="date">14 марта</div>
+        <div class="day">вторник</div>
+      </div>
+      <div class="lightgrey element-animation">
+        <div class="time">19:00</div>
+        <div class="info">
+          <div class="name">Силы Судьбы</div>
+          <div class="about">опера Джузеппе Верди</div>
+          <div class="actors">
+            В главных партиях: Ирина Чурилова, Михаил Векуа, Алексей Марков,
+            Надежда Сердюк, Олег Сычёв, Андрей Спехов
+          </div>
+        </div>
+        <div class="buy">
+          <button class="buyticket" onclick="document.getElementById('id01').style.display='block'">
+            Купить билет
+          </button>
+        </div>
+      </div>
+      <div class="middlegrey element-animation">
+        <div class="time">19:00</div>
+        <div class="info">
+          <div class="name">Бенвенуто Челлини</div>
+          <div class="about">опера Гектора Берлиоза</div>
+          <div class="actors">
+            В главных партиях: Александр Михайлов, Антонина Весенина,
+            Екатерина Крапивина, Егор Чубаков, Николай Каменский, Юрий
+            Воробьёв
+          </div>
+        </div>
+        <div class="buy">
+          <button class="buyticket" onclick="document.getElementById('id01').style.display='block'">
+            Купить билет
+          </button>
+        </div>
+      </div>
+      <div class="darkergrey element-animation">
+        <div class="time">19:00</div>
+        <div class="info">
+          <div class="name">Вокальный вечер</div>
+          <div class="actors">
+            В программе: Глинка, Даргомыжский, Бородин, Мусоргский,
+            Чайковский, Рахманинов Солисты: Виолетта Лукьяненко, Владислав
+            Куприянов, Дмитрий Григорьев Партия фортепиано – Александр Рубинов
+          </div>
+        </div>
+        <div class="buy">
+          <button class="buyticket" onclick="document.getElementById('id01').style.display='block'">
+            Купить билет
+          </button>
+        </div>
+      </div>
+
+      <div class="daydate">
+        <div class="date">15 марта</div>
+        <div class="day">среда</div>
+      </div>
+      <div class="lightgrey element-animation">
+        <div class="time">19:00</div>
+        <div class="info">
+          <div class="name">Руслан и Людмила</div>
+          <div class="about">опера Михаила Глинки</div>
+          <div class="actors">
+            В главных партиях: Айгуль Хисматуллина, Алексей Кулагин (Гран-при
+            Международного конкурса вокалистов и концертмейстеров Хиблы
+            Герзмава), Злата Булычёва, Павел Шмулевич, Татьяна Павловская,
+            Олег Видеман, Евгений Акимов
+          </div>
+        </div>
+        <div class="buy">
+          <button class="buyticket" onclick="document.getElementById('id01').style.display='block'">
+            Купить билет
+          </button>
+        </div>
+      </div>
+      <div class="middlegrey element-animation">
+        <div class="time">19:00</div>
+        <div class="info">
+          <div class="name">Корсар</div>
+          <div class="about">балет Адольфа Адана</div>
+          <div class="actors">
+            В главных партиях: Мария Ильюшкина, Надежда Батоева, Роман
+            Беляков, Владимир Шкляров
+          </div>
+        </div>
+        <div class="buy">
+          <button class="buyticket" onclick="document.getElementById('id01').style.display='block'">
+            Купить билет
+          </button>
+        </div>
+      </div>
+      <div class="darkergrey element-animation">
+        <div class="time">19:00</div>
+        <div class="info">
+          <div class="name">Дон Паскуале</div>
+          <div class="about">опера Гаэтано Доницетти</div>
+          <div class="actors">
+            В главных партиях: Яков Стрижак, Оксана Шилова, Виктор Коротич,
+            Станислав Леонтьев, Дмитрий Колеушко
+          </div>
+        </div>
+        <div class="buy">
+          <button class="buyticket" onclick="document.getElementById('id01').style.display='block'">
+            Купить билет
+          </button>
+        </div>
+      </div>
+
+      <div class="daydate">
+        <div class="date">16 марта</div>
+        <div class="day">четверг</div>
+      </div>
+      <div class="lightgrey element-animation">
+        <div class="time">19:00</div>
+        <div class="info">
+          <div class="name">Аида</div>
+          <div class="about">опера Джузеппе Верди</div>
+          <div class="actors">
+            В главных партиях: Татьяна Сержан, Юлия Маточкина, Ахмед Агади,
+            Владимир Ванеев, Глеб Перязев, Владимир Феляуэр
+          </div>
+        </div>
+        <div class="buy">
+          <button class="buyticket" onclick="document.getElementById('id01').style.display='block'">
+            Купить билет
+          </button>
+        </div>
+      </div>
+      <div class="middlegrey element-animation">
+        <div class="time">19:00</div>
+        <div class="info">
+          <div class="name">Корсар</div>
+          <div class="about">балет Адольфа Адана</div>
+          <div class="actors">
+            В главных партиях: Мария Ильюшкина, Надежда Батоева, Роман
+            Беляков, Владимир Шкляров
+          </div>
+        </div>
+        <div class="buy">
+          <button class="buyticket" onclick="document.getElementById('id01').style.display='block'">
+            Купить билет
+          </button>
+        </div>
+      </div>
+      <div class="darkergrey element-animation">
+        <div class="time">19:00</div>
+        <div class="info">
+          <div class="name">
+            Гайдн. Концерт для виолончели с оркестром № 1 Стравинский. Сюита
+            из балета «Жар-птица», Концерт для скрипки с оркестром
+          </div>
+          <div class="actors">
+            Федор Амосов (виолончель), Павел Милюков (скрипка) Дирижер –
+            Димитрис Ботинис
+          </div>
+        </div>
+        <div class="buy">
+          <button class="buyticket" onclick="document.getElementById('id01').style.display='block'">
+            Купить билет
+          </button>
+        </div>
+      </div>
+      <div class="lightgrey element-animation">
+        <div class="time">20:00</div>
+        <div class="info">
+          <div class="name">Оранго</div>
+          <div class="about">опера Дмитрия Шостаковича</div>
+        </div>
+        <div class="buy">
+          <button class="buyticket" onclick="document.getElementById('id01').style.display='block'">
+            Купить билет
+          </button>
+        </div>
+      </div>
+
+      <div class="daydate">
+        <div class="date">17 марта</div>
+        <div class="day">пятница</div>
+      </div>
+      <div class="lightgrey element-animation">
+        <div class="time">19:00</div>
+        <div class="info">
+          <div class="name">Дон Кихот</div>
+          <div class="about">балет Людвига Минкуса</div>
+          <div class="actors">
+            <div>
+              В главных партиях: Михаил Векуа, Татьяна Павловская, Юлия
+              Маточкина, Павел Шмулевич, Эдем Умеров
+            </div>
+            <div>Дирижер – Валерий Гергиев</div>
+          </div>
+        </div>
+        <div class="buy">
+          <button class="buyticket" onclick="document.getElementById('id01').style.display='block'">
+            Купить билет
+          </button>
+        </div>
+      </div>
+      <div class="middlegrey element-animation">
+        <div class="time">18:00</div>
+        <div class="info">
+          <div class="name">Тристан и Изольда</div>
+          <div class="about">опера Рихарда Вагнера</div>
+          <div class="actors">
+            В главных партиях: Александр Михайлов, Антонина Весенина,
+            Екатерина Крапивина, Егор Чубаков, Николай Каменский, Юрий
+            Воробьёв
+          </div>
+        </div>
+        <div class="buy">
+          <button class="buyticket" onclick="document.getElementById('id01').style.display='block'">
+            Купить билет
+          </button>
+        </div>
+      </div>
+      <div class="darkergrey element-animation">
+        <div class="time">19:00</div>
+        <div class="info">
+          <div class="name">Вокальный вечер</div>
+          <div class="actors">
+            В программе: Глинка, Даргомыжский, Бородин, Мусоргский,
+            Чайковский, Рахманинов Солисты: Виолетта Лукьяненко, Владислав
+            Куприянов, Дмитрий Григорьев Партия фортепиано – Александр Рубинов
+          </div>
+        </div>
+        <div class="buy">
+          <button class="buyticket" onclick="document.getElementById('id01').style.display='block'">
+            Купить билет
+          </button>
+        </div>
+      </div>
+
+      <div class="daydate">
+        <div class="date">18 марта</div>
+        <div class="day">суббота</div>
+      </div>
+      <div class="lightgrey element-animation">
+        <div class="time">11:00</div>
+        <div class="info">
+          <div class="name">Лебединое озеро</div>
+          <div class="about">балет Петра Чайковского</div>
+          <div class="actors">
+            В главных партиях: Светлана Свинко, Степан Демин
+          </div>
+        </div>
+        <div class="buy">
+          <button class="buyticket" onclick="document.getElementById('id01').style.display='block'">
+            Купить билет
+          </button>
+        </div>
+      </div>
+      <div class="middlegrey element-animation">
+        <div class="time">15:00</div>
+        <div class="info">
+          <div class="name">Лебединое озеро</div>
+          <div class="about">балет Петра Чайковского</div>
+          <div class="actors">
+            В главных партиях: Елена Чернова, Андрей Сорокин
+          </div>
+        </div>
+        <div class="buy">
+          <button class="buyticket" onclick="document.getElementById('id01').style.display='block'">
+            Купить билет
+          </button>
+        </div>
+      </div>
+      <div class="darkergrey element-animation">
+        <div class="time">20:00</div>
+        <div class="info">
+          <div class="name">Сильфида</div>
+          <div class="about">балет Хермана Левенскьольда</div>
+          <div class="actors">
+            В главных партиях: Кристина Шапран, Филипп Стёпин
+          </div>
+        </div>
+        <div class="buy">
+          <button class="buyticket" onclick="document.getElementById('id01').style.display='block'">
+            Купить билет
+          </button>
+        </div>
+      </div>
+      <div class="lightgrey element-animation">
+        <div class="time">19:00</div>
+        <div class="info">
+          <div class="name">Трубадур</div>
+          <div class="about">опера Джузеппе Верди</div>
+          <div class="actors">
+            В главных партиях: Татьяна Сержан, Екатерина Семенчук, Ахмед Агади
+          </div>
+        </div>
+        <div class="buy">
+          <button class="buyticket" onclick="document.getElementById('id01').style.display='block'">
+            Купить билет
+          </button>
+        </div>
+      </div>
+      <div class="middlegrey element-animation">
+        <div class="time">19:00</div>
+        <div class="info">
+          <div class="name">Провинциалка</div>
+          <div class="about">мюзикл Александра Чайковского</div>
+          <div class="actors">Дирижер – Алексей Моргунов</div>
+        </div>
+        <div class="buy">
+          <button class="buyticket" onclick="document.getElementById('id01').style.display='block'">
+            Купить билет
+          </button>
+        </div>
+      </div>
+      <div class="darkergrey element-animation">
+        <div class="time">20:00</div>
+        <div class="info">
+          <div class="name">Сильфида</div>
+          <div class="about">балет Хермана Левенскьольда</div>
+          <div class="actors">
+            В главных партиях: Кристина Шапран, Филипп Стёпин
+          </div>
+        </div>
+        <div class="buy">
+          <button class="buyticket" onclick="document.getElementById('id01').style.display='block'">
+            Купить билет
+          </button>
+        </div>
+      </div>
+
+      <div class="daydate">
+        <div class="date">19 марта</div>
+        <div class="day">воскресенье</div>
+      </div>
+      <div class="lightgrey element-animation">
+        <div class="time">12:00</div>
+        <div class="info">
+          <div class="name">Свадьба Фигаро</div>
+          <div class="about">опера Вольфганга Амадея Моцарта</div>
+          <div class="actors">
+            В главных партиях: Магеррам Гусейнов, Виолетта Лукьяненко, Мария
+            Баянкина, Сергей Романов, Екатерина Крапивина, Варвара Соловьёва,
+            Михаил Колелишвили
+          </div>
+        </div>
+        <div class="buy">
+          <button class="buyticket" onclick="document.getElementById('id01').style.display='block'">
+            Купить билет
+          </button>
+        </div>
+      </div>
+      <div class="middlegrey element-animation">
+        <div class="time">19:00</div>
+        <div class="info">
+          <div class="name">Паяцы</div>
+          <div class="about">опера Руджеро Леонкавалло</div>
+          <div class="actors">
+            В главных партиях: Евгений Акимов, Анжелика Минасова, Евгений
+            Ахмедов, Эдем Умеров, Виктор Коротич
+          </div>
+        </div>
+        <div class="buy">
+          <button class="buyticket" onclick="document.getElementById('id01').style.display='block'">
+            Купить билет
+          </button>
+        </div>
+      </div>
+      <div class="darkergrey element-animation">
+        <div class="time">13:00</div>
+        <div class="info">
+          <div class="name">Волшебная флейта</div>
+          <div class="about">опера Вольфганга Амадея Моцарта</div>
+          <div class="actors">
+            В главных партиях: Лариса Юдина, Оксана Шилова, Роман Широких,
+            Юрий Воробьёв, Ирина Матаева, Вадим Кравец
+          </div>
+        </div>
+        <div class="buy">
+          <button class="buyticket" onclick="document.getElementById('id01').style.display='block'">
+            Купить билет
+          </button>
+        </div>
+      </div>
+      <div class="lightgrey element-animation">
+        <div class="time">19:00</div>
+        <div class="info">
+          <div class="name">Волшебная флейта</div>
+          <div class="about">опера Вольфганга Амадея Моцарта</div>
+          <div class="actors">
+            В главных партиях: Лариса Юдина, Оксана Шилова, Роман Широких,
+            Юрий Воробьёв, Ирина Матаева, Вадим Кравец
+          </div>
+        </div>
+        <div class="buy">
+          <button class="buyticket" onclick="document.getElementById('id01').style.display='block'">
+            Купить билет
+          </button>
+        </div>
+      </div>
+      <div class="middlegrey element-animation">
+        <div class="time">19:00</div>
+        <div class="info">
+          <div class="name">Времена года: Вивальди, Пьяццолла</div>
+          <div class="actors">
+            <div>
+              Солисты: Ольга Котлярова (орган), Елена Серова (клавесин),
+              Владимир Маслов (ударные)
+            </div>
+            <div>Солист и дирижер – Лоренц Настурика-Гершовичи</div>
+          </div>
+        </div>
+        <div class="buy">
+          <button class="buyticket" onclick="document.getElementById('id01').style.display='block'">
+            Купить билет
+          </button>
+        </div>
+      </div>
+      <div class="darkergrey element-animation">
+        <div class="time">20:00</div>
+        <div class="info">
+          <div class="name">Репка</div>
+          <div class="about">опера Рустама Сагдиева</div>
+        </div>
+        <div class="buy">
+          <button class="buyticket" onclick="document.getElementById('id01').style.display='block'">
+            Купить билет
+          </button>
+        </div>
+      </div>
+
+      <div class="daydate">
+        <div class="date">20 марта</div>
+        <div class="day">понедельник</div>
+      </div>
+      <div class="lightgrey element-animation">
+        <div class="time">18:30</div>
+        <div class="info">
+          <div class="name">Хованщина</div>
+          <div class="about">опера Модеста Мусоргского</div>
+          <div class="actors">
+            <div>
+              В главных партиях: Юлия Маточкина, Станислав Трофимов, Геннадий
+              Беззубенков, Сергей Скороходов, Олег Видеман, Вячеслав Васильев,
+              Андрей Зорин
+            </div>
+            <div>Дирижер – Валерий Гергиев</div>
+          </div>
+        </div>
+        <div class="buy">
+          <button class="buyticket" onclick="document.getElementById('id01').style.display='block'">
+            Купить билет
+          </button>
+        </div>
+      </div>
+      <div class="middlegrey element-animation">
+        <div class="time">19:00</div>
+        <div class="info">
+          <div class="name">Марина Вяйзя (орган)</div>
+          <div class="about">В программе: Бах</div>
+        </div>
+        <div class="buy">
+          <button class="buyticket" onclick="document.getElementById('id01').style.display='block'">
+            Купить билет
+          </button>
+        </div>
+      </div>
+
+      <div class="daydate">
+        <div class="date">21 марта</div>
+        <div class="day">вторник</div>
+      </div>
+      <div class="lightgrey element-animation">
+        <div class="time">19:00</div>
+        <div class="info">
+          <div class="name">Кармен</div>
+          <div class="about">опера Жоржа Бизе</div>
+          <div class="actors">
+            В главных партиях: Екатерина Сергеева, Михаил Векуа, Екатерина
+            Гончарова, Ариунбаатар Ганбаатар
+          </div>
+        </div>
+        <div class="buy">
+          <button class="buyticket" onclick="document.getElementById('id01').style.display='block'">
+            Купить билет
+          </button>
+        </div>
+      </div>
+      <div class="middlegrey element-animation">
+        <div class="time">19:00</div>
+        <div class="info">
+          <div class="name">
+            <div>
+              Рахманинов. Симфония № 3, Вариации на тему Корелли (премьера
+              оркестровой версии), романсы
+            </div>
+            <div>Кипрский. Пять этюдов-картин</div>
+          </div>
+          <div class="about">
+            <div>
+              Cолисты: Эдуард Кипрский (фортепиано), Мария Баянкина (сопрано)
+            </div>
+            <div>Дирижер – Валерий Гергиев</div>
+          </div>
+        </div>
+        <div class="buy">
+          <button class="buyticket" onclick="document.getElementById('id01').style.display='block'">
+            Купить билет
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="foot">
+    <div class="theatrefooter">Мариинский театр</div>
+    <div class="footcontact">
+      <p>© 1998 – 2023</p>
+      <p>Мариинский театр</p>
+      <p>post@mariinsky.ru</p>
+      <p>Справочная служба</p>
+      <p>+7 812 326 41 41</p>
+      <p>tickets@mariinsky.ru</p>
+    </div>
+    <div class="places">
+      <p>Мариинский театр:</p>
+      <p>Театральная площадь, д. 1</p>
+      <p>Мариинский-2:</p>
+      <p>ул. Декабристов, д. 34</p>
+      <p>Мариинский-2:</p>
+      <p>ул. Декабристов, д. 34</p>
+      <p>Концертный зал:</p>
+      <p>ул. Писарева, д. 20</p>
+    </div>
+    <div class="morelinks">
+      <a href="https://mariinsky.tv/" class="afoot">mariinsky.tv</a>
+      <a href="https://www.mariinsky.ru/fm/" class="afoot">mariinsky.fm</a>
+      <a href="https://www.mariinsky.ru/links/2/" class="afoot">mariinsky.gift</a>
+      <a href="https://vk.com/mariinskytheatre"><img alt="vk" src="images\vklogo.png" /></a>
+      <a href="https://ok.ru/mariinsky"><img alt="ok" src="images\oklogo.png" /></a>
+      <a href="https://t.me/mariinsky"><img alt="tg" src="images\tglogo.png" /></a>
+    </div>
+  </footer>
+  <script type="text/javascript" src="script\main.js"></script>
+  <script type="text/javascript" src="script\secondvar.js"></script>
+</body>
+</html>
